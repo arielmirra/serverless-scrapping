@@ -17,13 +17,13 @@ package dpoi.serverless.scapping.model.action;
  */
 public class CreateScrapResponse {
 
-    private String scapId = null;
+    private String scrapId = null;
 
-    public String getScapId() {
-        return scapId;
+    public String getScrapId() {
+        return scrapId;
     }
 
-    public void setScapId(String scapId) {
-        this.scapId = scapId;
+    public void setScrapId(String scrapId) {
+        this.scrapId = scrapId;
     }
 }

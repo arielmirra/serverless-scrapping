@@ -61,7 +61,7 @@ public class ScrapUrlAction implements ApplicationAction {
     }
 
     final CreateScrapResponse output = new CreateScrapResponse();
-    output.setScapId(scrap.getUuid());
+    output.setScrapId(scrap.getUuid());
 
     return getGson().toJson(output);
   }
