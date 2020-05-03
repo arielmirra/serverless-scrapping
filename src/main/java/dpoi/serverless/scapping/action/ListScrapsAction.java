@@ -30,7 +30,8 @@ import static dpoi.serverless.scapping.Utils.getGson;
 /** Action to return a list of scraps from the data store */
 public class ListScrapsAction implements ApplicationAction {
 
-    public String handle(JsonObject request, Context lambdaContext) throws BadRequestException, InternalErrorException {
+    public String handle(JsonObject request, Context lambdaContext)
+            throws BadRequestException, InternalErrorException {
         final LambdaLogger logger = lambdaContext.getLogger();
         final ScrapDAO dao = DAOFactory.getScrapDAO();
 
