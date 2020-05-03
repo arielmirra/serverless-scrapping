@@ -24,7 +24,10 @@ import dpoi.serverless.scapping.model.action.CreateScrapResponse;
 import dpoi.serverless.scapping.model.action.ScrapUrlRequest;
 import dpoi.serverless.scapping.model.scrap.Scrap;
 import dpoi.serverless.scapping.model.scrap.ScrapDAO;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
+import java.io.IOException;
 import java.util.Date;
 
 import static dpoi.serverless.scapping.Utils.*;
@@ -67,6 +70,13 @@ public class ScrapUrlAction implements ApplicationAction {
   }
 
   private String fetchStructuredData(ScrapUrlRequest request, LambdaLogger logger) {
-    return null; // Return jsonld for given request
+    // Return jsonld for given request
+    try {
+      Document document = Jsoup.connect(request.getUrl()).get();
+      return document.select("script[type=application/ld+json]").first().childNode(0).toString();
+    } catch (IOException e) {
+      System.out.println(e.toString());
+      return null;
+    }
   }
 }
