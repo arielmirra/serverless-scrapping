@@ -11,7 +11,10 @@ public class Main {
         }
 
         Random r = new Random();
-        return r.nextInt((max - min) + 1) + min;
+
+        int result = r.nextInt((max - min) + 1) + min;
+        System.out.println(result);
+        return result;
     }
 
     public int handle() {
@@ -19,6 +22,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        getRandomNumberInRange(0, 100);
     }
 }
 
