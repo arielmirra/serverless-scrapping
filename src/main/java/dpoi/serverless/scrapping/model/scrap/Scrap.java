@@ -4,18 +4,18 @@
  * with the License. A copy of the License is located at
  * http://aws.amazon.com/apache2.0/
  */
-package dpoi.serverless.scapping.model.scrap;
+package dpoi.serverless.scrapping.model.scrap;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBIgnore;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import com.google.gson.JsonObject;
-import dpoi.serverless.scapping.configuration.DynamoDBConfiguration;
+import dpoi.serverless.scrapping.configuration.DynamoDBConfiguration;
 
 import java.util.Date;
 
-import static dpoi.serverless.scapping.Utils.getGson;
+import static dpoi.serverless.scrapping.Utils.getGson;
 
 /**
  * Scrap object model - this class is annotated to be used with the DynamoDB object mapper.

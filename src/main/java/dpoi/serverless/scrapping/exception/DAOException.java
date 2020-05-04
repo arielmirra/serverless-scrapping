@@ -10,20 +10,17 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.model.action;
+package dpoi.serverless.scrapping.exception;
 
 /**
- * Bean for the scrap creation response.
+ * This exception should bot be exposed to Lambda or the client application. It's used internally to identify a DAO issue
  */
-public class CreateScrapResponse {
-
-    private String scrapId = null;
-
-    public String getScrapId() {
-        return scrapId;
+public class DAOException extends Exception {
+    public DAOException(String s, Exception e) {
+        super(s, e);
     }
 
-    public void setScrapId(String scrapId) {
-        this.scrapId = scrapId;
+    public DAOException(String s) {
+        super(s);
     }
 }

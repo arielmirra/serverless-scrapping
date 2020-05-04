@@ -10,22 +10,22 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.action;
+package dpoi.serverless.scrapping.action;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.google.gson.JsonObject;
-import dpoi.serverless.scapping.configuration.DynamoDBConfiguration;
-import dpoi.serverless.scapping.exception.BadRequestException;
-import dpoi.serverless.scapping.exception.InternalErrorException;
-import dpoi.serverless.scapping.model.DAOFactory;
-import dpoi.serverless.scapping.model.action.ListScrapsResponse;
-import dpoi.serverless.scapping.model.scrap.Scrap;
-import dpoi.serverless.scapping.model.scrap.ScrapDAO;
+import dpoi.serverless.scrapping.configuration.DynamoDBConfiguration;
+import dpoi.serverless.scrapping.exception.BadRequestException;
+import dpoi.serverless.scrapping.exception.InternalErrorException;
+import dpoi.serverless.scrapping.model.DAOFactory;
+import dpoi.serverless.scrapping.model.action.ListScrapsResponse;
+import dpoi.serverless.scrapping.model.scrap.Scrap;
+import dpoi.serverless.scrapping.model.scrap.ScrapDAO;
 
 import java.util.List;
 
-import static dpoi.serverless.scapping.Utils.getGson;
+import static dpoi.serverless.scrapping.Utils.getGson;
 
 /** Action to return a list of scraps from the data store */
 public class ListScrapsAction implements ApplicationAction {

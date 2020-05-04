@@ -10,13 +10,20 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.configuration;
+package dpoi.serverless.scrapping.model.action;
 
 /**
- * Static list of error messages when exceptions are thrown
+ * Bean for the scrap creation response.
  */
-public interface ExceptionMessages {
-    String EX_INVALID_INPUT = "Invalid input parameters";
-    String EX_DAO_ERROR = "Error loading user";
-    String EX_SCRAP_ERROR = "Error scrapping url";
+public class CreateScrapResponse {
+
+    private String scrapId = null;
+
+    public String getScrapId() {
+        return scrapId;
+    }
+
+    public void setScrapId(String scrapId) {
+        this.scrapId = scrapId;
+    }
 }

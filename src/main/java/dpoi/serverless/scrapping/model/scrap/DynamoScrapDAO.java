@@ -10,18 +10,18 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.model.scrap;
+package dpoi.serverless.scrapping.model.scrap;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
-import dpoi.serverless.scapping.configuration.DynamoDBConfiguration;
-import dpoi.serverless.scapping.exception.DAOException;
+import dpoi.serverless.scrapping.configuration.DynamoDBConfiguration;
+import dpoi.serverless.scrapping.exception.DAOException;
 
 import java.util.List;
 
-import static dpoi.serverless.scapping.Utils.isEmpty;
-import static dpoi.serverless.scapping.Utils.nextId;
+import static dpoi.serverless.scrapping.Utils.isEmpty;
+import static dpoi.serverless.scrapping.Utils.nextId;
 
 /** DynamoDB implementation of the ScrapDAO interface. */
 public class DynamoScrapDAO implements ScrapDAO {

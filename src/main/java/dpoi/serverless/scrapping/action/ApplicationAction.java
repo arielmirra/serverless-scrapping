@@ -10,12 +10,12 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.action;
+package dpoi.serverless.scrapping.action;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.google.gson.JsonObject;
-import dpoi.serverless.scapping.exception.BadRequestException;
-import dpoi.serverless.scapping.exception.InternalErrorException;
+import dpoi.serverless.scrapping.exception.BadRequestException;
+import dpoi.serverless.scrapping.exception.InternalErrorException;
 
 /**
  * ApplicationAction defines the methods called by the RequestRouter when it is invoked by a Lambda function. Implementing

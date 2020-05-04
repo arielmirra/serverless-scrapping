@@ -10,19 +10,21 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.exception;
+package dpoi.serverless.scrapping.exception;
 
 /**
- * This exception should be thrown whenever requests fail validation. The exception sets a default pattern in the string
- * "BAD_REQ: .*" that can be easily matched from the API Gateway for mapping.
+ * This exception is thrown whenever an internal error occurs, for example a DAO error if the data store is not accessible.
+ * The exception sets a default pattern in the string "INT_ERROR: .*" that can be easily matched from the API Gateway for
+ * mapping.
  */
-public class BadRequestException extends Exception {
-    private static final String PREFIX = "BAD_REQ: ";
-    public BadRequestException(String s, Exception e) {
+public class InternalErrorException extends Exception {
+    private static final String PREFIX = "INT_ERROR: ";
+
+    public InternalErrorException(String s, Exception e) {
         super(PREFIX + s, e);
     }
 
-    public BadRequestException(String s) {
+    public InternalErrorException(String s) {
         super(PREFIX + s);
     }
 }

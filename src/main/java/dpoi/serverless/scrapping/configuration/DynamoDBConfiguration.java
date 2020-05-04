@@ -10,17 +10,13 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.exception;
+package dpoi.serverless.scrapping.configuration;
 
 /**
- * This exception should bot be exposed to Lambda or the client application. It's used internally to identify a DAO issue
+ * Configuration parameters for the DynamoDB DAO objects
  */
-public class DAOException extends Exception {
-    public DAOException(String s, Exception e) {
-        super(s, e);
-    }
-
-    public DAOException(String s) {
-        super(s);
-    }
+public interface DynamoDBConfiguration {
+    String CONTAINER_TABLE_NAME = "containers";
+    String SCRAPS_TABLE_NAME = "scraps";
+    int SCAN_LIMIT = 50;
 }

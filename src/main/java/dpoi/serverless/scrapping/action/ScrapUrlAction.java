@@ -10,28 +10,28 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.action;
+package dpoi.serverless.scrapping.action;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.google.gson.JsonObject;
-import dpoi.serverless.scapping.configuration.ExceptionMessages;
-import dpoi.serverless.scapping.exception.BadRequestException;
-import dpoi.serverless.scapping.exception.DAOException;
-import dpoi.serverless.scapping.exception.InternalErrorException;
-import dpoi.serverless.scapping.model.DAOFactory;
-import dpoi.serverless.scapping.model.action.CreateScrapResponse;
-import dpoi.serverless.scapping.model.action.ScrapUrlRequest;
-import dpoi.serverless.scapping.model.scrap.Scrap;
-import dpoi.serverless.scapping.model.scrap.ScrapDAO;
+import dpoi.serverless.scrapping.configuration.ExceptionMessages;
+import dpoi.serverless.scrapping.exception.BadRequestException;
+import dpoi.serverless.scrapping.exception.DAOException;
+import dpoi.serverless.scrapping.exception.InternalErrorException;
+import dpoi.serverless.scrapping.model.DAOFactory;
+import dpoi.serverless.scrapping.model.action.CreateScrapResponse;
+import dpoi.serverless.scrapping.model.action.ScrapUrlRequest;
+import dpoi.serverless.scrapping.model.scrap.Scrap;
+import dpoi.serverless.scrapping.model.scrap.ScrapDAO;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 import java.util.Date;
 
-import static dpoi.serverless.scapping.Utils.*;
-import static dpoi.serverless.scapping.configuration.ExceptionMessages.EX_INVALID_INPUT;
+import static dpoi.serverless.scrapping.Utils.*;
+import static dpoi.serverless.scrapping.configuration.ExceptionMessages.EX_INVALID_INPUT;
 
 /**
  * Action that scraps an url and posts result to 'scraps' table

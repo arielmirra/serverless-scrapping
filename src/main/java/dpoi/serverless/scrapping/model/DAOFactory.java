@@ -10,10 +10,10 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.model;
+package dpoi.serverless.scrapping.model;
 
-import dpoi.serverless.scapping.model.scrap.DynamoScrapDAO;
-import dpoi.serverless.scapping.model.scrap.ScrapDAO;
+import dpoi.serverless.scrapping.model.scrap.DynamoScrapDAO;
+import dpoi.serverless.scrapping.model.scrap.ScrapDAO;
 
 /**
  * The DAO Factory object to abstract the implementation of DAO interfaces.

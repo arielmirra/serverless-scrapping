@@ -10,23 +10,19 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.model.scrap;
-
-import dpoi.serverless.scapping.exception.DAOException;
-
-import java.util.List;
+package dpoi.serverless.scrapping.exception;
 
 /**
- * This interface defines the methods required for an implementation of a ScrapsDAO object
+ * This exception should be thrown whenever requests fail validation. The exception sets a default pattern in the string
+ * "BAD_REQ: .*" that can be easily matched from the API Gateway for mapping.
  */
-public interface ScrapDAO {
+public class BadRequestException extends Exception {
+    private static final String PREFIX = "BAD_REQ: ";
+    public BadRequestException(String s, Exception e) {
+        super(PREFIX + s, e);
+    }
 
-    /** Find a scrap by its uuid */
-    Scrap getScrapById(String uuid) throws DAOException;
-
-    /** Creates a new scrap in the data store */
-    String createScrap(Scrap scrap) throws DAOException;
-
-    /** List scraps in the data store */
-    List<Scrap> getScraps(int limit);
+    public BadRequestException(String s) {
+        super(PREFIX + s);
+    }
 }

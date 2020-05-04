@@ -10,13 +10,13 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package dpoi.serverless.scapping.configuration;
+package dpoi.serverless.scrapping.configuration;
 
 /**
- * Configuration parameters for the DynamoDB DAO objects
+ * Static list of error messages when exceptions are thrown
  */
-public interface DynamoDBConfiguration {
-    String CONTAINER_TABLE_NAME = "containers";
-    String SCRAPS_TABLE_NAME = "scraps";
-    int SCAN_LIMIT = 50;
+public interface ExceptionMessages {
+    String EX_INVALID_INPUT = "Invalid input parameters";
+    String EX_DAO_ERROR = "Error loading user";
+    String EX_SCRAP_ERROR = "Error scrapping url";
 }

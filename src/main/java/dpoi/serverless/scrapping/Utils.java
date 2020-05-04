@@ -1,4 +1,4 @@
-package dpoi.serverless.scapping;
+package dpoi.serverless.scrapping;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

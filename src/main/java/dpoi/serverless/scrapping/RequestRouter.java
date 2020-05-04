@@ -4,11 +4,11 @@
  * with the License. A copy of the License is located at
  * http://aws.amazon.com/apache2.0/
  */
-package dpoi.serverless.scapping;
+package dpoi.serverless.scrapping;
 
-import dpoi.serverless.scapping.action.ApplicationAction;
-import dpoi.serverless.scapping.exception.BadRequestException;
-import dpoi.serverless.scapping.exception.InternalErrorException;
+import dpoi.serverless.scrapping.action.ApplicationAction;
+import dpoi.serverless.scrapping.exception.BadRequestException;
+import dpoi.serverless.scrapping.exception.InternalErrorException;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.google.gson.JsonObject;
