@@ -75,7 +75,7 @@ public class RequestRouter {
     {
         final ApplicationAction action;
         try {
-            action = ApplicationAction.class.cast(Class.forName(actionClass).newInstance());
+            action = (ApplicationAction) Class.forName(actionClass).newInstance();
         }
         catch (final InstantiationException e) {
             logger.log("Error while instantiating action class\n" + e.getMessage());
