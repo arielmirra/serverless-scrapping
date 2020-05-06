@@ -13,11 +13,10 @@ public class Main {
         Random r = new Random();
 
         int result = r.nextInt((max - min) + 1) + min;
-        System.out.println(result);
         return result;
     }
 
-    public int handle() {
+    public static int handle() {
         return getRandomNumberInRange(0, 100);
     }
 
