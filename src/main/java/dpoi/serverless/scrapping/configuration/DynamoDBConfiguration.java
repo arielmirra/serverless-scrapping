@@ -17,6 +17,6 @@ package dpoi.serverless.scrapping.configuration;
  */
 public interface DynamoDBConfiguration {
     String CONTAINER_TABLE_NAME = "containers";
-    String SCRAPS_TABLE_NAME = "scraps";
+    String SCRAPS_TABLE_NAME = "Scraps";
     int SCAN_LIMIT = 50;
 }

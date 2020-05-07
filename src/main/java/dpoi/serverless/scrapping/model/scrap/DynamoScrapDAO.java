@@ -26,8 +26,8 @@ import static dpoi.serverless.scrapping.Utils.nextId;
 /** DynamoDB implementation of the ScrapDAO interface. */
 public class DynamoScrapDAO implements ScrapDAO {
 
-    /* Credentials for the client come from the environment variables pre-configured by Lambda.
-    These are tied to the Lambda function execution role. */
+    // Credentials for the client come from the environment variables pre-configured by Lambda.
+    // These are tied to the Lambda function execution role.
     private static final AmazonDynamoDBClient ddbClient = new AmazonDynamoDBClient();
 
     private static class InstanceHolder {

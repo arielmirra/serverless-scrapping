@@ -16,8 +16,9 @@ package dpoi.serverless.scrapping.exception;
  * This exception should bot be exposed to Lambda or the client application. It's used internally to identify a DAO issue
  */
 public class DAOException extends Exception {
+    private static final String PREFIX = "BAD_DAO: ";
     public DAOException(String s, Exception e) {
-        super(s, e);
+        super(PREFIX + s, e);
     }
 
     public DAOException(String s) {

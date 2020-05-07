@@ -71,8 +71,8 @@ public class RequestRouter {
     }  // end method lambdaHandler
 
     private static ApplicationAction instantiateAction(LambdaLogger logger, String actionClass)
-        throws InternalErrorException, BadRequestException
-    {
+        throws InternalErrorException, BadRequestException {
+
         final ApplicationAction action;
         try {
             action = (ApplicationAction) Class.forName(actionClass).newInstance();
@@ -99,8 +99,8 @@ public class RequestRouter {
     }
 
     private static JsonObject getJsonInputObject(InputStream request, LambdaLogger logger, JsonParser parser)
-        throws InternalErrorException, BadRequestException
-    {
+        throws InternalErrorException, BadRequestException {
+
         final JsonObject inputObj;
         try {
             inputObj = parser.parse(IOUtils.toString(request)).getAsJsonObject();
